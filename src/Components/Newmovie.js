@@ -10,7 +10,7 @@ function Newmovie({addMovie}) {
     const [newposter, setnewposter] = useState("");
     const [synopsis, setsynopsis] = useState("");
     const [rate, setrate] = useState(""); 
-
+   const [NewTrailer , setNewTrailer]= useState ("")
 
 
     const handleClose = () => setIsOpen(false);
@@ -23,6 +23,7 @@ function Newmovie({addMovie}) {
         title: newtitle,
         description:synopsis,
         rating : rate,
+        trailer : NewTrailer
     },    setIsOpen(false))
 }
 
@@ -35,6 +36,7 @@ function Newmovie({addMovie}) {
         <h3>Movie poster:(add an URL)</h3>  <input type="text" onChange={(e)=> setnewposter(e.target.value)} />
         <h3>Movie synopsis:</h3>  <input type="text" onChange={(e)=> setsynopsis(e.target.value)}  />
         <h3>Movie rating/5:</h3>  <input type="text" onChange={(e)=> setrate(e.target.value)} />
+        <h3>Add trailer:(embed) </h3> <input type="text" onChange={(e)=> setNewTrailer(e.target.value)} />
         <button onClick={newMovie}> Save new movie </button>
         <button onClick={handleClose}> Close </button>
         </Modal>

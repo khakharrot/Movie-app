@@ -1,18 +1,24 @@
 import React from 'react'
-import StarsRating from 'stars-rating'
+import ReactStars from "react-stars";
+import {Routes, Route, Link } from "react-router-dom";
+
 
 function Moviecard({el}) {
   return (
     <div className='card'> 
+     <Link to="/Trailer">
       <img src= {el.posterURL }/>
+      </Link>
       <p>Movie title: {el.title}</p>
        <h3>Synopsis: {el.description} </h3>
-       <StarsRating
-  count={5}
-  value={el.rating}
-  size={24}
-  color2={'#ffd700'} 
-  edit={false} />
+       <ReactStars
+              count={5}
+              size={24}
+              color2={"#ffd700"}
+              value={el.rating}
+              edit={false}
+            />
+             
     </div>
   )
 }

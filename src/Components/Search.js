@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import StarsRating from 'stars-rating'
+import ReactStars from "react-stars";
 
 
 function Search({setSearchWord,setSearchRating}) {
@@ -10,12 +10,13 @@ function Search({setSearchWord,setSearchRating}) {
   return (
     <div className='search'>
     <input type="text" onChange={(e)=> setSearchWord (e.target.value)}/>
-     <StarsRating
-  count={5}
-  size={24}
-  color2={'#ffd700'} 
-  edit={true}
-  onChange={ratingChanged} />
+    <ReactStars
+          count={5}
+          size={24}
+          color2={"#ffd700"}
+          edit={true}
+          onChange={ratingChanged}
+        />
     </div>
   )
 }
