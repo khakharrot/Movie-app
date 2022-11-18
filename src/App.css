@@ -14,7 +14,12 @@ body { background-image: url(https://images.cdn4.stockunlimited.net/preview1300/
     flex-direction: row;
     justify-content: space-between
   }
-
+.Trailer {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 .Modal{font-family: sans-serif;
     text-align: center;

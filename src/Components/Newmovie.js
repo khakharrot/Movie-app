@@ -3,7 +3,10 @@ import Modal from 'react-modal';
 import { useState } from 'react';
 
 
-function Newmovie({addMovie}) {
+function Newmovie({Movies,setMovies}) {
+
+  const addMovie = (x) => {
+    setMovies ([...Movies, x ])}
 
     const [modalIsOpen, setIsOpen]= useState(false);
     const [newtitle, setnewtitle] = useState("");

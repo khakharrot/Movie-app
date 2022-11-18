@@ -6,7 +6,7 @@ import {Routes, Route, Link } from "react-router-dom";
 function Moviecard({el}) {
   return (
     <div className='card'> 
-     <Link to="/Trailer">
+     <Link to={`/Trailer/${el.title}`}>
       <img src= {el.posterURL }/>
       </Link>
       <p>Movie title: {el.title}</p>
