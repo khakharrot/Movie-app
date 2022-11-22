@@ -8,9 +8,10 @@ function Trailer() {
   const { titleMovies } = useParams()
 
   const [Movies, setMovies] = useState(list);
-console.log (titleMovies)
+console.log (Movies.description)
   return (
     <div className='Trailer'>
+      <h2>Trailer: {Movies.find((el) => el.title === titleMovies).description} </h2>
       <iframe width="420" height="315" title='Movie trailer'
 src= {Movies.find((el) => el.title === titleMovies).trailer}>
   </iframe> 
